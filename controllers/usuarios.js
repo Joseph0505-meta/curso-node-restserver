@@ -64,7 +64,6 @@ const usuariosDelete = async (req, res = response) => {
 
     //Ficament borramos el usuario 
     // const usuario = await Usuario.findByIdAndDelete( id );
-
     const usuario = await Usuario.findByIdAndUpdate( id, {estado: false} );
     res.json(usuario);
 }
@@ -74,7 +73,6 @@ const usuariosPatch = (req, res = response) => {
         msg: 'patch API -- controlador',
     })
 }
-
 
 module.exports = {
     usuariosGet,
